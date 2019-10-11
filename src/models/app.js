@@ -3,7 +3,7 @@ export default {
   state: {
     collapsed: false,
     panes: [
-      {title: `dashboard`, content: '', key: '1', closable: false, url: '/dashboard'},
+      { title: `dashboard`, content: '', key: '1', closable: false, url: '/dashboard' },
     ],
     theme: 'dark',
     menus: [{
@@ -16,12 +16,26 @@ export default {
       name: 'd3组件',
       icon: 'user',
       url: '1',
-      children: [{
-        id: '3',
-        name: '水波球',
-        icon: 'user',
-        url: '/liquidFill',
-      },]
+      children: [
+        {
+          id: '21',
+          name: '水波球',
+          icon: 'user',
+          url: '/liquidFill',
+        },
+        {
+          id: '22',
+          name: '柱状图',
+          icon: 'user',
+          url: '/barGraph',
+        },
+        {
+          id: '23',
+          name: '折线图',
+          icon: 'user',
+          url: '/lineChart',
+        },
+      ]
     },
     {
       id: '3',
@@ -35,12 +49,12 @@ export default {
         url: '/user',
       },]
     }
-  ],
+    ],
   },
   subscriptions: {},
   effects: {},
   reducers: {
-    handleCollapseChange(state, {payload}) {
+    handleCollapseChange(state, { payload }) {
       return {
         ...state,
         ...payload,

@@ -1,0 +1,45 @@
+.container {
+  box-sizing: border-box;
+  height: 100% ;
+  padding: 20px;
+  .group {
+    height: 100% ;
+    background: #01080f;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .con {
+      .graph {
+        width: 650px;
+        height: 420px;
+        & svg {
+          :global(.r-xAxis) {
+            path, line {
+              display: none;
+            }
+            text {
+              font-size: 14px;
+              color: #fdfdfd;
+            }
+          }
+          :global(.r-yAxis) {
+            path, line {
+              display: none;
+            }
+            text {
+              font-size: 14px;
+              color: #c4c4c4;
+              font-family: '黑体';
+            }
+          }
+          :global(.xyLine) {
+            stroke: #393c45;
+            // shape-rendering: crispedges;
+            stroke-width: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import './font/index.less';
 export const dva = {
   config: {
     onError(err) {
