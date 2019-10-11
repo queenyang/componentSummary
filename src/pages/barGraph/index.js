@@ -12,9 +12,10 @@ export default class extends Component {
       { name: '数据二', value: 4467 },
       { name: '数据三', value: 2356 },
       { name: '数据四', value: 3895 },
-      { name: '数据五', value: 3895 },
+      { name: '数据五', value: 3495 },
       { name: '数据六', value: 3895 },
       { name: '数据七', value: 2597 },
+      { name: '数据八', value: 2997 },
     ]
   }
 
