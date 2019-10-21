@@ -16,25 +16,30 @@ export default {
       name: 'd3组件',
       icon: 'user',
       url: '1',
-      children: [
-        {
-          id: '21',
-          name: '水波球',
-          icon: 'user',
-          url: '/liquidFill',
-        },
-        {
-          id: '22',
-          name: '柱状图',
-          icon: 'user',
-          url: '/barGraph',
-        },
-        {
-          id: '23',
-          name: '折线图',
-          icon: 'user',
-          url: '/lineChart',
-        },
+      children: [{
+        id: '21',
+        name: '水波球',
+        icon: 'user',
+        url: '/liquidFill',
+      },
+      {
+        id: '22',
+        name: '柱状图',
+        icon: 'user',
+        url: '/barGraph',
+      },
+      {
+        id: '23',
+        name: '折线图',
+        icon: 'user',
+        url: '/lineChart',
+      },
+      {
+        id: '24',
+        name: '渐变镂空圆环',
+        icon: 'user',
+        url: '/gradientRing',
+      },
       ]
     },
     {
@@ -44,7 +49,7 @@ export default {
       url: '1',
       children: [{
         id: '31',
-        name: '图片粒子化',
+        name: '用户管理',
         icon: 'user',
         url: '/particleImg',
       },]
@@ -60,5 +65,5 @@ export default {
         ...payload,
       }
     },
-  },
+  }
 }

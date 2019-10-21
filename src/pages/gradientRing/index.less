@@ -1,0 +1,89 @@
+.container {
+  box-sizing: border-box;
+  height: 100% ;
+  padding: 20px;
+  .group {
+    height: 100% ;
+    background: #01080f;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .con {
+      position: relative;
+      margin-bottom: 46px;
+      .dashLine {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+        p {
+          position: absolute;
+          left: 0;right: 0;
+          top: 0;bottom:0;
+          margin: auto;
+          width: 0px;
+          height: 230px;
+          border-right: dashed 2px #ffffff;
+          opacity: 0.11;
+          transform-origin: center;
+        }
+        p:nth-child(2) {
+          transform: rotate(60deg);
+        }
+        p:nth-child(3) {
+          transform: rotate(120deg);
+        }
+      }
+      .graphWrp {
+        width: 250px;
+        height: 250px;
+        animation: rotateAnimate 3s linear infinite;
+      }
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img {
+          width: 100px;
+        }
+      }
+      .outerLine {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+        border: 2px solid #76c0ff;
+        border-radius: 200%;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        animation: antiAotateAnimate 5s linear infinite;
+      }
+      
+    }
+  }
+}
+@keyframes rotateAnimate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antiAotateAnimate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
