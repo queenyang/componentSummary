@@ -43,10 +43,10 @@ export default {
       icon: 'user',
       url: '1',
       children: [{
-        id: '4',
-        name: '用户管理',
+        id: '31',
+        name: '图片粒子化',
         icon: 'user',
-        url: '/user',
+        url: '/particleImg',
       },]
     }
     ],
