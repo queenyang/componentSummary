@@ -1,36 +1,15 @@
 export default function render() {
+  const canvas = document.getElementById('particleImg');
+  const ctx = canvas.getContext('2d');
+
   const img = document.createElement('img');
   img.src = require('../../assets/laiang.jpg');
   img.onload = () => {
-    console.log('img.onload')
-    const canvas = document.getElementById('particleImg');
-    const ctx = canvas.getContext('2d');
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.drawImage(img, 0, 0, img.width, img.height);
-    // const imgData = ctx.getImageData(0, 0, img.width, img.height);
-    const imgData = ctx.getImageData(0, 0, img.width, img.height);  //RGBA的一维数组数据
+    const imgData = ctx.getImageData(0, 0, img.width, img.height);  //复制画布上指定矩形的像素数据，RGBA的一维数组数据
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    var Dot = function (centerX, centerY, radius, fillStyle) {
-      this.x = centerX;
-      this.y = centerY;
-      this.radius = radius;
-      this.fillStyle = fillStyle;
-    }
-    Dot.prototype = {
-      paint: function () {
-        ctx.save();
-        ctx.beginPath();
-        // arc(x, y, r, startAngle, endAngle, anticlockwise) 以x,y为圆心，以r为半径，从startAngle弧度开始到endAngle弧度结束，anticlosewise是布尔值，true表示逆时针，false表示顺时针，默认是顺时针
-        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-        console.log(this.fillStyle)
-        ctx.fillStyle = this.fillStyle;
-        ctx.fill()
-        ctx.restore();
-      }
-    }
-
     var dots = [];
     for (var x = 0; x < imgData.width; x += 4) {
       for (var y = 0; y < imgData.height; y += 4) {
@@ -41,11 +20,28 @@ export default function render() {
         }
       }
     }
+
     dots.forEach(function (item) {
       item.paint();
     })
-
-
+  }
+  // 圆点构造函数
+  var Dot = function (centerX, centerY, radius, fillStyle) {
+    this.x = centerX;
+    this.y = centerY;
+    this.radius = radius;
+    this.fillStyle = fillStyle;
+  }
+  Dot.prototype = {
+    paint: function () {
+      ctx.save();
+      ctx.beginPath();
+      // arc(x, y, r, startAngle, endAngle, anticlockwise) 以x,y为圆心，以r为半径，从startAngle弧度开始到endAngle弧度结束，anticlosewise是布尔值，true表示逆时针，false表示顺时针，默认是顺时针
+      ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+      ctx.fillStyle = this.fillStyle;
+      ctx.fill()
+      ctx.restore();
+    }
   }
 }
 
