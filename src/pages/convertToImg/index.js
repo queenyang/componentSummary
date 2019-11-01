@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styles from './index.less';
-// import renderGraph from './render';
 import renderGraph from './render';
-import renderText from './renderText';
 
 export default class extends Component {
   constructor(props) {
@@ -12,16 +10,18 @@ export default class extends Component {
 
   componentDidMount() {
     renderGraph();
-    renderText();
   }
 
   render() {
     return (
       <div className={styles.container}>
         <div className={styles.group}>
-          <div className={styles.con}>
-            <canvas className={styles.graph} id='particleImg'></canvas>
-            <canvas className={styles.graph} width="600" height="300" id='particleText'></canvas>
+          <div className={styles.con} id="con">
+            <p> <img id="ringoImage" style={{ width: '282px', height: '312px' }} alt="" src={require("../../assets/laiang.jpg")} /> </p>
+            <h2>图片 -&gt; 画布图像</h2>
+            <div id="canvasHolder"></div>
+            <h2>画布 -&gt; PNG图片</h2>
+            <div id="pngHolder"></div>
           </div>
         </div>
       </div>

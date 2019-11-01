@@ -16,30 +16,31 @@ export default {
       name: 'd3组件',
       icon: 'user',
       url: '1',
-      children: [{
-        id: '21',
-        name: '水波球',
-        icon: 'user',
-        url: '/liquidFill',
-      },
-      {
-        id: '22',
-        name: '柱状图',
-        icon: 'user',
-        url: '/barGraph',
-      },
-      {
-        id: '23',
-        name: '折线图',
-        icon: 'user',
-        url: '/lineChart',
-      },
-      {
-        id: '24',
-        name: '渐变镂空圆环',
-        icon: 'user',
-        url: '/gradientRing',
-      },
+      children: [
+        {
+          id: '21',
+          name: '水波球',
+          icon: 'user',
+          url: '/liquidFill',
+        },
+        {
+          id: '22',
+          name: '柱状图',
+          icon: 'user',
+          url: '/barGraph',
+        },
+        {
+          id: '23',
+          name: '折线图',
+          icon: 'user',
+          url: '/lineChart',
+        },
+        {
+          id: '24',
+          name: '渐变镂空圆环',
+          icon: 'user',
+          url: '/gradientRing',
+        },
       ]
     },
     {
@@ -47,12 +48,20 @@ export default {
       name: 'canvas组件',
       icon: 'user',
       url: '1',
-      children: [{
-        id: '31',
-        name: '用户管理',
-        icon: 'user',
-        url: '/particleImg',
-      },]
+      children: [
+        {
+          id: '31',
+          name: '粒子渲染图片',
+          icon: 'user',
+          url: '/particleImg',
+        },
+        {
+          id: '32',
+          name: '生成图片',
+          icon: 'user',
+          url: '/convertToImg',
+        },
+      ]
     }
     ],
   },
